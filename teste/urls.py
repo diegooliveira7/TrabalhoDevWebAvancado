@@ -15,12 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-#from web1.views import index #tem que localizar a aplicação
 from django.urls import path, include
 
-#Aqui são as rotas
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    #path('', index) #Como ela é a página raiz, deixa vázio
-    path('', include('teste.urls'))
+    path('', include('web1.urls')),
+    #path('contato', )
 ]
